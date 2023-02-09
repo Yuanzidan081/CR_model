@@ -14,11 +14,13 @@ parameter;
 %% paper reproduction
 
 v=[0;0;1];% the derivative of position vector
+
 %for i=1:length(kappa)% Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
 for i=1:length(torsion)% Single-segment [Constant Curvature and Torsion Test-2]  
 
     %u{i}=[-kappa(i)*sin(alpha);kappa(i)*cos(alpha);torsion];% Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
     u{i}=[-kappa*sin(alpha);kappa*cos(alpha);torsion(i)];% Single-segment [Constant Curvature and Torsion Test-2]  
+    
     f{i}=[v;u{i}];% the elment in R6 called twist
     k=1;
     for s=L_seq %the length
@@ -32,8 +34,10 @@ end
 % visualization
 figure(1);
 axis equal;
+
 %for i=1:length(kappa)% % Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
 for i=1:length(torsion)% Single-segment [Constant Curvature and Torsion Test-2]  
+    
     plot3(Pos{i}(:,1),Pos{i}(:,2),Pos{i}(:,3));
     hold on;
 end
