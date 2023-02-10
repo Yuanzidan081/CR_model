@@ -10,21 +10,21 @@ H0=eye(4);% initial homogenous matrix at s=0
 
 % L=1; % the length of the whole arc m
 % L_seq=linspace(0,L,20);
-% kappa=pi/10:pi/10:pi;% curvature m^{-1}
-% torsion=0;% torsion
-% alpha=0;%the angle between bending plane and +X axis
+% kappa=0:pi/10:pi;% curvature m^{-1}
+% tau=0;% torsion m^{-1}
+% alpha=pi/2;%the angle between bending plane and +X axis
 
 % 2 Single-segment Constant Curvature and Torsion
 % 2.1 
 % L=1; % the length of the whole arc m
 % L_seq=linspace(0,L,20);
 % kappa=0:pi/2:pi*2;% curvature m^{-1}
-% torsion=3;% torsion
+% tau=3;% torsion
 % alpha=0;%the angle between bending plane and +X axis
 
 % 2.2
-% L=1; % the length of the whole arc m
-% L_seq=linspace(0,L,20);
-% kappa=3;% curvature m^{-1}
-% torsion=0:pi/2:pi*2;% torsion
-% alpha=0;%the angle between bending plane and +X axis
+L=1; % the length of the whole arc m
+L_seq=linspace(0,L,20);
+kappa=3;% curvature m^{-1}
+tau=0:pi/2:pi*2;% torsion
+alpha=0;%the angle between bending plane and +X axis

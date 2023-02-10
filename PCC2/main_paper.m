@@ -2,24 +2,24 @@ clc;
 clear;
 close all;
 
-% add path to main.m
+% add path to main_paper.m
 addpath('Model/kinematics_ScrewTheory/');
 addpath('Model/common/');
 addpath('Parameter/');
 
 % import the parameters
-parameter;
+parameter_paper;
 
 % verify the algorithm
 %% paper reproduction
 
 v=[0;0;1];% the derivative of position vector
 
-%for i=1:length(kappa)% Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
-for i=1:length(torsion)% Single-segment [Constant Curvature and Torsion Test-2]  
+% for i=1:length(kappa)% Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
+for i=1:length(tau)% Single-segment [Constant Curvature and Torsion Test-2]  
 
-    %u{i}=[-kappa(i)*sin(alpha);kappa(i)*cos(alpha);torsion];% Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
-    u{i}=[-kappa*sin(alpha);kappa*cos(alpha);torsion(i)];% Single-segment [Constant Curvature and Torsion Test-2]  
+%     u{i}=[-kappa(i)*sin(alpha);kappa(i)*cos(alpha);tau];% Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
+    u{i}=[-kappa*sin(alpha);kappa*cos(alpha);tau(i)];% Single-segment [Constant Curvature and Torsion Test-2]  
     
     f{i}=[v;u{i}];% the elment in R6 called twist
     k=1;
@@ -35,14 +35,14 @@ end
 figure(1);
 axis equal;
 
-%for i=1:length(kappa)% % Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
-for i=1:length(torsion)% Single-segment [Constant Curvature and Torsion Test-2]  
+% for i=1:length(kappa)% % Single-segment [Constant Curvature] and Single-segment [Constant Curvature and Torsion Test-1]
+for i=1:length(tau)% Single-segment [Constant Curvature and Torsion Test-2]  
     
     plot3(Pos{i}(:,1),Pos{i}(:,2),Pos{i}(:,3));
     hold on;
 end
-zlabel('z')
-
+axis([-1,1,-1,1]);
+grid on;
 
 
 
