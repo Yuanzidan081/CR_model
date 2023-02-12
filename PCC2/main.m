@@ -39,6 +39,7 @@ for i=1:size(kappa,1)
     axes_setting;
     drawnow();
     pause(0.2)
+    generate_gif;
 end
 
 label_setting;
