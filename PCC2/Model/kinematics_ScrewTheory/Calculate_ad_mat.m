@@ -1,5 +1,5 @@
 function [ad_mat] = Calculate_ad_mat(x1,x2)
-% Integral_exp_ad
+% Calculate_ad_mat
 % Author: Lin Siyuan
 % Date : 2023/02/25
 % Purpose: Compute the adjoint matrix(ad)

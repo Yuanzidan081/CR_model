@@ -1,4 +1,4 @@
-function [H,R,p] = FK_n_segments(kappa,tau,alpha,number_arc_interval,number_segments,disk_interval)
+function [H,R,p,f] = FK_n_segments(kappa,tau,alpha,number_arc_interval,number_segments,disk_interval)
 % forward_n_segments
 % Author: Lin Siyuan
 % Date : 2023/02/10

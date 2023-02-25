@@ -5,6 +5,7 @@ function [SO3e] = R3toSO3_(R3e,s)
 % purpose: transfer the element in R3 to the element in SO3
 % Input: 
 %   R3e: an element in R3
+%   s: a scalar 
 % Output:
 %   SO3e: an element in SO3 
 so3e=[0,      -R3e(3), R3e(2);...

@@ -12,10 +12,7 @@ addpath('Visulization\');
 parameter;
 
 %% verify the algorithmn two segments 
-t=[0;0;1;0;0;0];
-norm_u=Calculate_norm_u(t(4:6));
-ad_mat=Calculate_ad_mat(t)
-Integral_exp_ad(1,norm_u,ad_mat)
+
 
 %% visualization
 % fig1=figure(1);

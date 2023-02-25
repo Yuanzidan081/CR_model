@@ -14,7 +14,7 @@ parameter;
 %% verify the algorithmn two segment 
 
 for i=1:size(kappa,1)
-    [~,~,p{i}] = FK_n_segments(kappa(i,:),tau,alpha,number_arc_interval,number_segments,disk_interval);
+    [H{i},~,p{i}] = FK_n_segments(kappa(i,:),tau,alpha,number_arc_interval,number_segments,disk_interval);
     for j=1:number_segments
         % the j th segment and the i th deformmation shape()t
         arc{i,j}=p{i}(number_arc_interval_cumsum(j)+1:number_arc_interval_cumsum(j+1)+1,:);
