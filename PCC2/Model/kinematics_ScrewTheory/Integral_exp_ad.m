@@ -14,13 +14,13 @@ function [T] = Integral_exp_ad(length_arc,norm_u,ad_mat)
 
 ln=length_arc*norm_u;
 
-if norm_w~=0
+if norm_u~=0
     T=length_arc*eye(6)+...
         (4-4*cos(ln)-ln*sin(ln))/(2*norm_u^2)*ad_mat+...
         (4*ln-5*sin(ln)+ln*cos(ln))/(2*norm_u^3)*ad_mat^2+...
         (2-2*cos(ln)-ln*sin(ln))/(2*norm_u^4)*ad_mat^3+...
         (2*ln-3*sin(ln)+ln*cos(ln))/(2*norm_u^5)*ad_mat^4;
-elseif norm_w==0
+elseif norm_u==0
     T=length_arc*eye(6)+0.5*length_arc^2*ad_mat;
 end
 end

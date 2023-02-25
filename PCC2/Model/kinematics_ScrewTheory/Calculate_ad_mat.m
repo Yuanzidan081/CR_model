@@ -1,18 +1,26 @@
-function [outputArg1,outputArg2] = Calculate_ad_mat(u,v)
+function [ad_mat] = Calculate_ad_mat(x1,x2)
 % Integral_exp_ad
 % Author: Lin Siyuan
 % Date : 2023/02/25
-% Purpose: Integral of the exponential of the adjoint matrix
+% Purpose: Compute the adjoint matrix(ad)
 
 %% Input: 
-%   length_arc: the length of each arc, it doesn't means the length from
-%   orign, scalar
-%   norm_u: the norm of u, norm_w = sqrt(u1^2 + u2^2 + u3^2), scalar
-%   ad_mat: the adjoint matrix, 6×6 matrix
+%   x1: if nargin=1: it is a 6\times 1 twist, which is [v;u]
+%      if nargin=2: it is a 3\times 1 vector, which is v related to
+%      position
+%   x2: if nargin=1: you don't need to input it
+%      if nargin=2: it is a 3\times 1 vector, which is u related to
+%      orientation
 %% Output:
-%   T: the result of integral of the expointial of the adjoint matrix
-
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+%   ad_mat: the adjoint matrix(ad)
+if nargin==1
+    v=x1(1:3,:);
+    u=x1(4:6,:); 
+elseif nargin==2
+    v=x1;
+    u=x2;
+end
+ad_mat=[R3toso3(u),R3toso3(v);...
+    zeros(3),R3toso3(u)];
 end
 
