@@ -11,7 +11,7 @@ addpath('Visulization\');
 % import the parameters
 parameter;
 
-%% verify the algorithmn two segments 
+%% verify the algorithmn two segment 
 
 for i=1:size(kappa,1)
     [~,~,p{i}] = FK_n_segments(kappa(i,:),tau,alpha,number_arc_interval,number_segments,disk_interval);

@@ -51,7 +51,6 @@ if length(number_arc_interval)~=number_segments
     error("the legnth of length_arc should be equal to the number of arc!");
 end
 
-length_arc=number_arc_interval*disk_interval;
 
 % set the origin's H、R、p
 H(1,:)=reshape(eye(4),1,[]);

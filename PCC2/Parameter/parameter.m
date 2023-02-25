@@ -13,4 +13,7 @@ number_arc_interval_cumsum=cumsum([0;number_arc_interval]);
 number_segments=3;
 disk_interval=0.01;
 
+length_arc=number_arc_interval*disk_interval;% the length of each arc 
+length_arc_cumsum=cumsum([[0;length_arc]]);
+
 all_segments_number=number_segments*size(kappa,1);
