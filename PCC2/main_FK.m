@@ -27,7 +27,7 @@ fig_setting;
 
 
 for i=1:size(kappa,1)
-%     hold on;
+    hold on;
     for j=1:number_segments
         text=['plot3(arc{',num2str(i),',',num2str(j),...
             '}(:,1),arc{',num2str(i),',',num2str(j),...

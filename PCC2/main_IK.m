@@ -14,13 +14,12 @@ parameter;
 %% verify the algorithmn of some shapes
 
 % square
-interval = deg2rad(2);
-tspan = 0:interval:2*pi;
-x_tip = 0.1*sign(cos(tspan)).*cos(tspan).^2;
-y_tip = 0.5*sign(sin(tspan)).*sin(tspan).^2;
-z_tip = 0.2*ones(1,length(tspan));
-P_target = [x_tip; y_tip; z_tip];
+tspan = 0:deg2rad(3):2*pi;
 
+x_tip = 0.2*cos(tspan);
+y_tip = 0.25*sin(tspan);
+z_tip = 0.9*ones(1,length(tspan));
+P_target = [x_tip; y_tip; z_tip];
 % P_target=[0.2;0.4;0.6]
 
 err_bound=0.001;
@@ -57,7 +56,7 @@ toc;
 [H{i},~,p{i},F] = FK_n_segments(kappa(:,1),tau,alpha,number_arc_interval,number_segments,disk_interval);
 for j=1:number_segments
         % the j th segment and the i th deformmation shape()t
-    arc{i,j}=p{1}(number_arc_interval_cumsum(j)+1:number_arc_interval_cumsum(j+1)+1,:);
+    arc{i,j}=p{i}(number_arc_interval_cumsum(j)+1:number_arc_interval_cumsum(j+1)+1,:);
 end
 end
 
@@ -69,24 +68,31 @@ P_target=P_target';
 fig1=figure(1);
 fig_setting;
 
-scatter3(P_target(1),P_target(2),P_target(3),'Marker','*','MarkerFaceColor','b')
-hold on;
-plot3(P_res(:,1),P_res(:,2),P_res(:,3),'Color','r');
-plot3(P_target(:,1),P_target(:,2),P_target(:,3),'Color','b');
-for i=1:size(P_target,2)
-%     hold on;
+
+
+for i=1:size(P_target,1)
+    
+    hold on;
+    
+    ax_P_res=plot3(P_res(:,1),P_res(:,2),P_res(:,3),'Color','r');
+    ax_P_target=plot3(P_target(:,1),P_target(:,2),P_target(:,3),'Color','b');
     for j=1:number_segments
         text=['plot3(arc{',num2str(i),',',num2str(j),...
             '}(:,1),arc{',num2str(i),',',num2str(j),...
             '}(:,2),arc{',num2str(i),',',num2str(j),'}(:,3));'];
         eval(text);
-%         hold on;
+        hold on;
     end
-    line_setting;
+    
+    
+
+    line_IK_setting;
     axes_setting;
     drawnow();
     pause(0.2)
     generate_gif;
+    delete(ax);
+    
 end
 
 label_setting;
