@@ -1,4 +1,4 @@
-function [T] = Integral_exp_ad(length_arc,norm_u,ad_mat)
+function [T] = Calculate_integeral_exp_ad(length_arc,norm_u,ad_mat)
 % Integral_exp_ad
 % Author: Lin Siyuan
 % Date : 2023/02/25
