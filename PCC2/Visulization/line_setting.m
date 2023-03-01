@@ -15,7 +15,7 @@ k=1;
 t=1;
 for j=1:number_segments
     set(ax(j),'LineStyle','-');
-    set(ax(j),'LineWidth',5);
+    set(ax(j),'LineWidth',4);
     set(ax(j),'Color',color{t});
     k=k+1;
 

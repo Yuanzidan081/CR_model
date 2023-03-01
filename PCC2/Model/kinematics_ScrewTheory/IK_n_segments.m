@@ -1,4 +1,4 @@
-function [P_actual,kappa,tau,alpha,Delta_p,final_twist] = IK_n_segments...
+function [P_actual,kappa,tau,alpha,Delta_p,final_twist,iteration_times] = IK_n_segments...
     (P_target,...
     number_arc_interval,...
     number_segments,...
@@ -36,7 +36,7 @@ function [P_actual,kappa,tau,alpha,Delta_p,final_twist] = IK_n_segments...
 %   alpha: the angle between the bending plane and the local +X axis, you
 %          must set it as a n*1 vector
 %   final_twist: final twist 6n*1 vector
-
+%   iteration_times: the iteration times 
 
 
 if isempty(initial_twist)
@@ -139,7 +139,7 @@ while err_creteria && i < maxiteration
     err_creteria=err > err_bound;
     
 end
-
+iteration_times=i
 if i==1
     f_mat=reshape(initial_twist,6,[]);% f's form of matrix
     if torsion_mode=='1'
@@ -164,7 +164,7 @@ else
 end
 
 final_twist=initial_twist;
-i
+
 if torsion_mode=='1'
     tau=(u_mat(3,:))';
 else
@@ -175,5 +175,6 @@ for i=1:number_segments
     
     alpha(i,:)=-atan2(u_mat(1,i),u_mat(2,i));
 end
+
 end
 
