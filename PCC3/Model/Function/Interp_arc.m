@@ -1,4 +1,4 @@
-function interp_points = Interp_arc(p_start,p_end,circle_center,arc_type,r,n)
+function [interp_points,p_n] = Interp_arc(p_start,p_end,circle_center,arc_type,r,n)
 %Interp_arc
 % Author: Lin Siyuan
 % Date : 2023/03/12
@@ -13,7 +13,7 @@ function interp_points = Interp_arc(p_start,p_end,circle_center,arc_type,r,n)
 %   n: the number of interpolation points, scalar
 % Output:
 %   interp_points: the interpolation points, n\times 3 matrix, the coloum means the coordination of x, y, z axis 
-
+%   p_n: the normal vector perpendicular to the circular plane
 
 
 p_NSo_in_OS=circle_center;
