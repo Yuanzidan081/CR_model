@@ -51,6 +51,8 @@ T=[R_NS_in_OS,p_NSo_in_OS;0,0,0,1];
 p_A_in_OS=T*[p_A_in_NS;ones(1,n)];
 interp_points=(p_A_in_OS(1:3,:))';
 
+
+
 end
 end
 
