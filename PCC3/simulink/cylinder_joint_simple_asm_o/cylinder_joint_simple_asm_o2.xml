@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="03/16/23||21:49:09" using="Simscape Multibody Link Version 7.4" from="SolidWorks 27.0.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="cylinder_joint_simple_asm1" uid="cylinder_joint_simple_asm1" version="164">
+<AssemblyFile name="cylinder_joint_simple_asm1.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="cylinder_joint-1" uid="cylinder_joint-1" grounded="true" entityUid="cylinder_joint*:*默认">
+<Transform>
+<Rotation>1 0 0 0 1.2246467991473532e-16 -1 0 1 1.2246467991473532e-16</Rotation>
+<Translation>-0.00047838779698046712 -0.0049971935378599029 0.00035000000000000048</Translation>
+</Transform>
+</Instance>
+<Instance name="cylinder_joint-3" uid="cylinder_joint-3" entityUid="cylinder_joint*:*默认">
+<Transform>
+<Rotation>-1 0 0 0 1.2246467991473532e-16 1 0 1 -1.2246467991473532e-16</Rotation>
+<Translation>-0.00047838779698046669 -0.0049971935378599029 0.0023500000000000005</Translation>
+</Transform>
+</Instance>
+<Instance name="cylinder_joint-2" uid="cylinder_joint-2" entityUid="cylinder_joint*:*默认">
+<Transform>
+<Rotation>0 0 -1 -1 1.2246467991473532e-16 0 1.2246467991473532e-16 1 0</Rotation>
+<Translation>-0.00047838779698046712 -0.0049971935378599029 0.0013500000000000007</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Coincident name="重合1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint-1</Uid>
+</InstancePath>
+<Position>0.00125 0.00035 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint-2</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999997 -0.00125</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="同心1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint-1</Uid>
+</InstancePath>
+<Position>-0.00125 0.00035 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint-2</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999997 -0.00125</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="重合2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint-2</Uid>
+</InstancePath>
+<Position>0.0012500000000000002 0.00035000000000000005 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint-3</Uid>
+</InstancePath>
+<Position>0 -0.0006500000000000004 -0.0012500000000000002</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="同心2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint-2</Uid>
+</InstancePath>
+<Position>-0.0012500000000000002 0.00035000000000000005 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint-3</Uid>
+</InstancePath>
+<Position>0 -0.0006500000000000004 -0.0012500000000000002</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="重合3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint-1</Uid>
+</InstancePath>
+<Position>0 -0.00035 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_simple_asm1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="cylinder_joint" uid="cylinder_joint*:*默认" version="775">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="cylinder_joint.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>7.1437706173698092e-06</Mass>
+<CenterOfMass>-5.021518594201587e-09 0.00018825214754673188 1.4575758212514265e-08</CenterOfMass>
+<Inertia>7.0951920145499358e-12 1.3936672161771973e-11 8.7125885445577523e-12 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="cylinder_joint_默认_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.88" g="0.88" b="0.88" a="1"/>
+<Emissive r="0.20999999999999999" g="0.20999999999999999" b="0.20999999999999999" a="1"/>
+<Shininess>0.20999999999999999</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
