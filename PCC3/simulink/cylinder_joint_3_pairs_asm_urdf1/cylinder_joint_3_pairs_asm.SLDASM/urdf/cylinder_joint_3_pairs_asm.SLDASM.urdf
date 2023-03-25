@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cylinder_joint_3_pairs_asm.SLDASM">
+  <link
+    name="link0">
+    <inertial>
+      <origin
+        xyz="-2.21907652596428E-08 -1.16344392510795E-08 0.000538247791607803"
+        rpy="0 0 0" />
+      <mass
+        value="7.14380964147276E-06" />
+      <inertia
+        ixx="7.09547840102883E-12"
+        ixy="4.28536440220919E-17"
+        ixz="7.2733077718843E-17"
+        iyy="8.71236658742558E-12"
+        iyz="1.14893231592751E-16"
+        izz="1.39367891333543E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="2.21907652597519E-08 0.000838247791607803 -1.1634439251032E-08"
+        rpy="0 0 0" />
+      <mass
+        value="7.14380964147277E-06" />
+      <inertia
+        ixx="7.09547840102883E-12"
+        ixy="-7.27330777190003E-17"
+        ixz="-4.28536440221508E-17"
+        iyy="1.39367891333544E-11"
+        iyz="1.14893231591848E-16"
+        izz="8.71236658742559E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0007"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="link0" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.157"
+      upper="0.157"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="2.21907652596375E-08 0.000838247791607803 -1.16344392512821E-08"
+        rpy="0 0 0" />
+      <mass
+        value="7.14380964147276E-06" />
+      <inertia
+        ixx="7.09547840102883E-12"
+        ixy="-7.2733077718771E-17"
+        ixz="-4.28536440221158E-17"
+        iyy="1.39367891333544E-11"
+        iyz="1.14893231591565E-16"
+        izz="8.71236658742558E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 0.001 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.157"
+      upper="0.157"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-2.21907652596816E-08 0.000838247791607803 1.16344392514508E-08"
+        rpy="0 0 0" />
+      <mass
+        value="7.14380964147276E-06" />
+      <inertia
+        ixx="7.09547840102883E-12"
+        ixy="7.27330777184924E-17"
+        ixz="-4.28536440225979E-17"
+        iyy="1.39367891333544E-11"
+        iyz="-1.14893231591718E-16"
+        izz="8.71236658742559E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0 0.001 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.157"
+      upper="0.157"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="2.21907652595922E-08 0.000838247791607803 -1.16344392505532E-08"
+        rpy="0 0 0" />
+      <mass
+        value="7.14380964147276E-06" />
+      <inertia
+        ixx="7.09547840102882E-12"
+        ixy="-7.27330777185742E-17"
+        ixz="-4.28536440226602E-17"
+        iyy="1.39367891333543E-11"
+        iyz="1.14893231591943E-16"
+        izz="8.71236658742557E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0 0.001 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.157"
+      upper="0.157"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-2.21907652597802E-08 0.000838247791607805 1.16344392510302E-08"
+        rpy="0 0 0" />
+      <mass
+        value="7.14380964147276E-06" />
+      <inertia
+        ixx="7.09547840102882E-12"
+        ixy="7.27330777185315E-17"
+        ixz="-4.28536440225276E-17"
+        iyy="1.39367891333543E-11"
+        iyz="-1.14893231591771E-16"
+        izz="8.71236658742557E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0 0.001 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.157"
+      upper="0.157"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="2.21907652596063E-08 0.000838247791607804 -1.16344392499518E-08"
+        rpy="0 0 0" />
+      <mass
+        value="7.14380964147276E-06" />
+      <inertia
+        ixx="7.09547840102882E-12"
+        ixy="-7.27330777187847E-17"
+        ixz="-4.28536440227107E-17"
+        iyy="1.39367891333543E-11"
+        iyz="1.1489323159158E-16"
+        izz="8.71236658742557E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="0 0.001 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.157"
+      upper="0.157"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkEnd">
+    <inertial>
+      <origin
+        xyz="1.16344392513296E-08 -0.000161752208392195 2.21907652591863E-08"
+        rpy="0 0 0" />
+      <mass
+        value="7.14380964147276E-06" />
+      <inertia
+        ixx="8.71236658742557E-12"
+        ixy="-1.1489323159158E-16"
+        ixz="4.28536440227107E-17"
+        iyy="1.39367891333543E-11"
+        iyz="-7.27330777187904E-17"
+        izz="7.09547840102882E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/linkEnd.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_3_pairs_asm.SLDASM/meshes/linkEnd.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointEnd"
+    type="fixed">
+    <origin
+      xyz="0 0.001 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="link6" />
+    <child
+      link="linkEnd" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="100"
+      velocity="1" />
+  </joint>
+</robot>
