@@ -1,0 +1,8 @@
+Constrained Instances: 'cylinder_joint_add_pulley-1', 'cylinder_joint_add_pulley-1', 'cylinder_joint_asm_2'
+Constraint Name: ¶Ô³Æ22
+Error Details: Constraint is not supported. The constraint has been ignored.
+---------------------------------------------------------------------------------
+Constrained Instances: 'cylinder_joint_add_pulley-1', 'cylinder_joint_add_pulley-1', 'cylinder_joint_asm_2'
+Constraint Name: ¶Ô³Æ23
+Error Details: Constraint is not supported. The constraint has been ignored.
+---------------------------------------------------------------------------------

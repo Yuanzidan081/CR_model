@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="03/25/23||15:55:30" using="Simscape Multibody Link Version 7.4" from="SolidWorks 27.0.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="cylinder_joint_asm_2" uid="cylinder_joint_asm_2" version="5518">
+<AssemblyFile name="cylinder_joint_asm_2.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="cylinder_joint_add_pulley-2" uid="cylinder_joint_add_pulley-2" entityUid="cylinder_joint_add_pulley*:*默认">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 -0.99999999999999989 1.2246467991473527e-16 0 1.2246467991473527e-16 0.99999999999999989 0</Rotation>
+<Translation>0 0 0.0013500000000000001</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-9" uid="pulley_0d2-9" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>1 0 0 0 1.2246467991473532e-16 -1 0 1 1.2246467991473532e-16</Rotation>
+<Translation>0.00012000000000004019 -0.0014999999999999994 0.0017000000000000003</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-3" uid="pulley_0d2-3" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>-1.361673625696565e-16 -2.0358988353377896e-16 1 1 1.5832120478360697e-14 1.3616736256965966e-16 -1.58321204783607e-14 1 2.0358988353377679e-16</Rotation>
+<Translation>-0.0017400000000000013 -0.00011999999999998324 0.00070000000000000259</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-4" uid="pulley_0d2-4" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>-1.7789572936710101e-16 1.6835528141231691e-16 1 -0.16755749772249945 -0.98586230527238183 1.3616736256965492e-16 0.98586230527238183 -0.16755749772249945 2.0358988353377694e-16</Rotation>
+<Translation>-0.0017399999999999991 0.0001199999999999998 0</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-6" uid="pulley_0d2-6" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>-0.22194074001759051 -0.97506015605215079 0 1.1941042990853853e-16 0 -1 0.97506015605215079 -0.22194074001759051 1.2246467991473532e-16</Rotation>
+<Translation>0.00011999999999999999 0.0017399999999999994 0</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-7" uid="pulley_0d2-7" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>0 1.0875984928912415e-16 1 -0.48264884041579531 -0.87581396246308374 0 0.87581396246308374 -0.48264884041579531 1.0179494176688949e-16</Rotation>
+<Translation>0.0015 -0.00011999999999999988 0</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-8" uid="pulley_0d2-8" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>0 0 1 -0.99895063590602107 0.045799858328993096 0 -0.045799858328993096 -0.99895063590602107 1.0179494176688794e-16</Rotation>
+<Translation>0.0015000000000000002 0.00012000000000000586 0.00069999999999999923</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-1" uid="pulley_0d2-1" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>0.88180371675804647 0.4716165869768526 0 0 1.0798980992039808e-16 -0.99999999999999978 -0.4716165869768526 0.88180371675804647 1.224646799147353e-16</Rotation>
+<Translation>0.00011999999999999999 -0.0014999999999999996 0.00070000000000000021</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-2" uid="pulley_0d2-2" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>1 0 0 0 1.2246467991473532e-16 -1 0 1 1.2246467991473532e-16</Rotation>
+<Translation>-0.00011999999999999999 -0.0015000000000000007 0</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-5" uid="pulley_0d2-5" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>-0.19907263182457649 0.97998473827832477 0 -1.2001351729458073e-16 0 -1.0000000000000002 -0.97998473827832477 -0.19907263182457649 1.2246467991473535e-16</Rotation>
+<Translation>-0.00011999999999999998 0.0017400000000000002 0.00069999999999999967</Translation>
+</Transform>
+</Instance>
+<Instance name="cylinder_joint_add_pulley-1" uid="cylinder_joint_add_pulley-1" entityUid="cylinder_joint_add_pulley*:*默认">
+<Transform>
+<Rotation>1 0 0 0 1.2246467991473532e-16 -1 0 1 1.2246467991473532e-16</Rotation>
+<Translation>0 0 0.00035</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-14" uid="pulley_0d2-14" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>-0.72807831086578212 -0.68549396295432807 0 -1.1617040086273181e-16 0 -1 0.68549396295432807 -0.72807831086578179 -1.1711441089131142e-16</Rotation>
+<Translation>0.00012000000000008589 0.0017400000000000002 0.001000000000000002</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-13" uid="pulley_0d2-13" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>-0.11624921123574068 0.99322007676399082 0 1.1275433035976546e-16 0 -1 -0.99322007676399127 -0.11624921123574074 -1.1711352844282523e-16</Rotation>
+<Translation>-0.00011999999999991386 0.00174 0.0017000000000000027</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-12" uid="pulley_0d2-12" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>1.2246467991473532e-16 0 1 1 1.2246467991473532e-16 -1.2246467991473532e-16 -1.2246467991473532e-16 1 0</Rotation>
+<Translation>-0.0017399999999999994 0.00012000000000000137 0.001</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-16" uid="pulley_0d2-16" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>0 0 0.99999999999999967 0.943287803435089 0.33197608331113981 0 -0.33197608331113981 0.943287803435089 0</Rotation>
+<Translation>0.0014999999999999996 -0.0001199999999999992 0.001</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-10" uid="pulley_0d2-10" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>1 0 0 0 1.2246467991473532e-16 -1 0 1 1.2246467991473532e-16</Rotation>
+<Translation>-0.00011999999999995974 -0.0015000000000000002 0.0010000000000000002</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-11" uid="pulley_0d2-11" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>1.2246467991473532e-16 0 1 1 1.2246467991473532e-16 -1.2246467991473532e-16 -1.2246467991473532e-16 1 0</Rotation>
+<Translation>-0.0017399999999999989 -0.0001199999999999985 0.0017000000000000001</Translation>
+</Transform>
+</Instance>
+<Instance name="pulley_0d2-15" uid="pulley_0d2-15" entityUid="pulley_0d2*:*默认">
+<Transform>
+<Rotation>0 0 0.99999999999999989 0.77441943652757383 -0.63267253483007724 0 0.63267253483007724 0.77441943652757383 0</Rotation>
+<Translation>0.0014999999999999992 0.00012000000000000092 0.0017000000000000001</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="同心3">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0.00011999999999999999 0.00035 0.0019009999999999999</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-1</Uid>
+</InstancePath>
+<Position>0 0 0.0099999999999999967</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>-0.00011999999999999999 -0.00035 0.0019009999999999999</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-2</Uid>
+</InstancePath>
+<Position>0 0 0.01</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心5">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>-0.0019009999999999986 0.00035 0.0001200000000000199</Position>
+<Axis>1 0 -1.04744440165294e-14</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-3</Uid>
+</InstancePath>
+<Position>0 0 0.0099999999999999985</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心6">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>-0.0019010000000000012 -0.00035 -0.00011999999999998008</Position>
+<Axis>1 0 -1.04744440165294e-14</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-4</Uid>
+</InstancePath>
+<Position>0 0 0.01</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心7">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>-0.00011999999999999999 0.00035 -0.0019009999999999999</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-5</Uid>
+</InstancePath>
+<Position>0 0 0.010000000000000004</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心8">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0.00011999999999999999 -0.00035 -0.0019009999999999999</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-6</Uid>
+</InstancePath>
+<Position>0 0 0.0099999999999999985</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心9">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0.0019009999999999995 0.00035 -0.00012000000000000663</Position>
+<Axis>-1 0 3.4914813388431334e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-8</Uid>
+</InstancePath>
+<Position>0 0 0.01</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心10">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0.0019010000000000003 -0.00035 0.00011999999999999335</Position>
+<Axis>-1 0 3.4914813388431334e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-7</Uid>
+</InstancePath>
+<Position>0 0 0.01</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心11">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>-0.00125 0.00035 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999975 -0.0012499999999999996</Position>
+<Axis>0 0 0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="重合3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>-0.00125 0.00035 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999975 0.0012499999999999996</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="同心13">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0.0019009999999999999 -0.00034999999999999983 0.00011999999999999329</Position>
+<Axis>-0.99999999999999989 0 3.4914813388431326e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-10</Uid>
+</InstancePath>
+<Position>0 0 0.0099999999999999985</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心14">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0.001900999999999999 0.00034999999999999983 -0.00012000000000000658</Position>
+<Axis>-0.99999999999999989 0 3.4914813388431326e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-9</Uid>
+</InstancePath>
+<Position>0 0 0.01</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心15">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0.00011999999999999996 0.00035000000000000005 0.001900999999999999</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-11</Uid>
+</InstancePath>
+<Position>0 0 0.01</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心17">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>-0.00011999999999999996 -0.00035000000000000005 0.001900999999999999</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-12</Uid>
+</InstancePath>
+<Position>0 0 0.0099999999999999985</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心19">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>-0.0019009999999999982 0.00034999999999999983 0.00012000000000001984</Position>
+<Axis>0.99999999999999989 0 -1.0474444016529398e-14</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-13</Uid>
+</InstancePath>
+<Position>0 0 0.01</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心20">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>-0.0019010000000000008 -0.00034999999999999983 -0.00011999999999998003</Position>
+<Axis>0.99999999999999989 0 -1.0474444016529398e-14</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-14</Uid>
+</InstancePath>
+<Position>0 0 0.01</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心21">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>-0.00011999999999999996 0.00035000000000000005 -0.001900999999999999</Position>
+<Axis>0 0 0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-15</Uid>
+</InstancePath>
+<Position>0 0 0.0099999999999999967</Position>
+<Axis>0 0 -0.99999999999999989</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="同心22">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0.00011999999999999996 -0.00035000000000000005 -0.001900999999999999</Position>
+<Axis>0 0 0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pulley_0d2-16</Uid>
+</InstancePath>
+<Position>0 0 0.0099999999999999933</Position>
+<Axis>0 0 -0.99999999999999967</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Distance name="距离1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-9</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0.0012499999999999996 0.00034999999999999983 0</Position>
+<Axis>0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-10</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0.0012499999999999996 0.00034999999999999983 0</Position>
+<Axis>0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离4">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-13</Uid>
+</InstancePath>
+<Position>0 0 0.00023999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>-0.0012499999999999996 0.00035000000000000005 0</Position>
+<Axis>-0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离5">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-14</Uid>
+</InstancePath>
+<Position>0 0 0.00023999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>-0.0012499999999999996 0.00035000000000000005 0</Position>
+<Axis>-0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离6">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-3</Uid>
+</InstancePath>
+<Position>0 0 0.00023999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>-0.00125 0.00035 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离7">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-4</Uid>
+</InstancePath>
+<Position>0 0 0.00023999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>-0.00125 0.00035 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离8">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-8</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0.00125 0.00035 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离9">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-7</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0.00125 0.00035 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离10">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999997 0.00125</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离11">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999997 0.00125</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离12">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-6</Uid>
+</InstancePath>
+<Position>0 0 0.00023999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999997 -0.00125</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离13">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-5</Uid>
+</InstancePath>
+<Position>0 0 0.00023999999999999998</Position>
+<Axis>0 0 1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999997 -0.00125</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离14">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-11</Uid>
+</InstancePath>
+<Position>0 0 0.00023999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999975 0.0012499999999999996</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离15">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-12</Uid>
+</InstancePath>
+<Position>0 0 0.00023999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999975 0.0012499999999999996</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离16">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-15</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -0.99999999999999989</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999975 -0.0012499999999999996</Position>
+<Axis>0 0 0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="距离17">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pulley_0d2-16</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -0.99999999999999967</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-2</Uid>
+</InstancePath>
+<Position>0 -0.00064999999999999975 -0.0012499999999999996</Position>
+<Axis>0 0 0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Distance>
+<Coincident name="重合18">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_add_pulley-1</Uid>
+</InstancePath>
+<Position>0 -0.00035 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cylinder_joint_asm_2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="cylinder_joint_add_pulley" uid="cylinder_joint_add_pulley*:*默认" version="828">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="cylinder_joint_add_pulley.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>7.1445669419340889e-06</Mass>
+<CenterOfMass>-5.0115163383111961e-09 0.00018823065008673659 1.4645547924552548e-08</CenterOfMass>
+<Inertia>7.0963761896141403e-12 1.3938794976810788e-11 8.713768625335769e-12 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="cylinder_joint_add_pulley_默认_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.88" g="0.88" b="0.88" a="1"/>
+<Emissive r="0.20999999999999999" g="0.20999999999999999" b="0.20999999999999999" a="1"/>
+<Shininess>0.20999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part name="pulley_0d2" uid="pulley_0d2*:*默认" version="210">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="pulley_0d2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.2619467105846496e-10</Mass>
+<CenterOfMass>0 0 0.0001200000000000034</CenterOfMass>
+<Inertia>0 0 0 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="pulley_0d2_默认_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.25098039215686274" g="0.50196078431372548" b="0.50196078431372548" a="1"/>
+<Diffuse r="0.25098039215686274" g="0.50196078431372548" b="0.50196078431372548" a="1"/>
+<Specular r="0.12549019607843137" g="0.25098039215686274" b="0.25098039215686274" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
