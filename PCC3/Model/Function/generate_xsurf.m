@@ -15,10 +15,11 @@ function end_x = generate_xsurf(beta_x0,beta_y0,ldt)
 
 
 
-end_x=-1./sin(beta_y0).*(((cos(beta_x0)+1).^2.*cos(beta_y0).^2+(2.*cos(beta_x0).^2-cos(beta_x0)-3).*cos(beta_y0)...
-    +cos(beta_x0).^2-3.*cos(beta_y0)+1).^2.*(cos(beta_y0)-1).*(cos(beta_y0)...
-    +1).^2.*ldt.*((cos(beta_x0)+1).^2.*cos(beta_y0).^2+(2.*cos(beta_x0).^2+cos(beta_x0)-1).*cos(beta_y0)...
-    +cos(beta_x0).^2-cos(beta_x0)-1).^2.*(cos(beta_x0)+1));
+end_x=(cos(beta_x0).*(cos(beta_y0)+1)+cos(beta_y0)-2).^2.*(cos(beta_x0).*(cos(beta_y0)+1)...
++cos(beta_y0)).^2.*sin(beta_y0).*(cos(beta_y0)+1).*((cos(beta_y0)+1).^2.*cos(beta_x0).^2+(2.*cos(beta_y0).^2 ...
+-2).*cos(beta_x0)+cos(beta_y0).^2-2 .*cos(beta_y0)-2).^2.*ldt.* (cos(beta_x0)...
++1).*(cos(beta_x0).*(cos(beta_y0)+1)+cos(beta_y0)-1).^2;
+
 
 ye0=find(beta_y0==0);
 if ~isempty(ye0)
@@ -27,6 +28,7 @@ end
 surf(beta_x0,beta_y0,end_x);
 xlabel('\beta_x');
 ylabel('\beta_y');
-zlabel('end-x');
+zlabel('end_x');
+title('end_x-\beta_x/\beta_y')
 end
 
