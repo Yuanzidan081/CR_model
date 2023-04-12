@@ -104,7 +104,9 @@ x=dtp(ind,1);
 y=dtp(ind,2);
 z=dtp(ind,3);
 figure;
+hold on;
 plot(x,y,'LineWidth',1,'Color',[0 0 1]);
+scatter(x,y,'Marker','*','Color',[1 0 0]);
 figure;
 plot3(x,y,z);
 
@@ -127,163 +129,7 @@ ylabel('end_y');
 zlabel('end-z');
 title('Worksapce of the manipulator with 25 joints');
 
-%% the relationship between angle and the change of rope
-% single dof
-% delta_sdrlmax:Delta_single_dof_rope_length_max
-% beta_sdamax: beta_single_dof_angle_max
-% the document's 'ldt' is declared as 'ddtcp' here
-r=1.62;
-ddtcp=0.3;
-Ns=6;
-beta_sdamax=pi/20;
-delta_sdrlmax=(Ns-1)*(r*beta_sdamax-1/6*r*beta_sdamax^3);
-disp('the maximum change of rope in the single segment is');
-disp(num2str(delta_sdrlmax));
-error_sdrlmax=(Ns-1)*r^2*beta_sdamax^4/(8*ddtcp);
-disp('the maximum error of rope in the single segment is');
-disp(num2str(error_sdrlmax));
-% double dof
-% delta_ddrlmax:Delta_double_dof_rope_length_max
-% beta_ddamax: beta_double_dof_angle_max
-r=1.62;
-ddtcp=0.3;
-Nd=25;
-beta_ddamax=pi/20;
-delta_ddrlmax=(Nd-1)/2*(r*beta_ddamax-1/6*r*beta_ddamax^3);
-disp('the maximum change of rope in the double segment is');
-disp(num2str(delta_ddrlmax));
-error_ddrlmax=(Nd-1)/2*r^2*beta_ddamax^4/(8*ddtcp);
-disp('the maximum error of rope in the double segment is');
-disp(num2str(error_ddrlmax));
-
-%% plot the relationship between the length of rope and the angle
-% single dof
-% delta_sdrl:Delta_single_dof_rope_length
-% beta_sda: beta_single_dof_angle
-% the document's 'ldt' is declared as 'ddtcp' here
-r=1.62;
-ddtcp=0.3;
-Ns=6;
-beta_sda=linspace(0,pi/20,100);
-delta_sdrlo=(Ns-1).*(sqrt((r.*(1-cos(beta_sda))).^2+(ddtcp+r.*sin(beta_sda)).^2)-ddtcp);
-delta_sdrl1=(Ns-1).*(r.*beta_sda);
-delta_sdrl3=(Ns-1).*(r.*beta_sda-1/6*r.*beta_sda.^3);
-figure;
-hold on;
-plot(beta_sda,delta_sdrlo,'k')
-plot(beta_sda,delta_sdrl1,'r');
-plot(beta_sda,delta_sdrl3,'b');
-title('The Taylor expansion of the single dof segment');
-xlabel('bend angle/rad');
-ylabel('the change of rope length/mm');
-hold off;
-% single dof
-% delta_sdrl:Delta_single_dof_rope_length
-% beta_sda: beta_single_dof_angle
-% the document's 'ldt' is declared as 'ddtcp' here
-r=1.62;
-ddtcp=0.3;
-Nd=25;
-beta_dda=linspace(0,pi/20,100);
-delta_ddrlo=(Nd-1)./2*(sqrt((r.*(1-cos(beta_dda))).^2+(ddtcp+r.*sin(beta_dda)).^2)-ddtcp);
-delta_ddrl1=(Nd-1)./2*(r.*beta_dda);
-delta_ddrl3=(Nd-1)./2*(r.*beta_dda-1/6*r.*beta_dda.^3);
-figure;
-hold on;
-plot(beta_dda,delta_ddrlo,'k')
-plot(beta_dda,delta_ddrl1,'r');
-plot(beta_dda,delta_ddrl3,'b');
-title('The Taylor expansion of the double dof segment');
-xlabel('bend angle/rad');
-ylabel('the change of rope length/mm');
-hold off;
-%% find the bending angle when the change of rope length is given, plot their relationship to find the zero point
-% single dof
-% dc: diameter of the joint cylinder
-% delta_sdrl:Delta_single_dof_rope_length
-% beta_sda: beta_single_dof_angle
-% the document's 'ldt' is declared as 'ddtcp' here
-r=1.62;
-dc=3.8;
-ddtcp=0.3;
-Ns=6;
-delta_sdrlmax=1.2671;
-delta_sdrl=linspace(-delta_sdrlmax,delta_sdrlmax,20);
-% beta_sdr=linspace(-pi/20,pi/20,100);
-beta_sdr=linspace(-asin(2*ddtcp/dc),asin(2*ddtcp/dc),100);
-% beta_sdr=linspace(-3*pi,3*pi,1000);
-
-beta_sol=ones(length(delta_sdrl),1);
-y_sol=ones(length(delta_sdrl),1);
 
 
 
-% use fzero to find the zero point of the angle
-% myfun_s = @(x,d) x^3-6*x+6*d/((6-1)*1.62);
-% myfun_s = @(x,d) (6-1)*(sqrt(1.62^2*(1-cos(x))^2+(0.3+1.62*sin(x))^2)-0.3)-d;
-myfun_s = @(x,d) (6-1)*(sqrt(1.62^2*(1-cos(x))^2+(0.3-1.62*sin(x))^2)-0.3)+d;
-for i=1:length(delta_sdrl)
-
-d = delta_sdrl(i);                    % parameter
-fun = @(x) myfun_s(x,d);    % function of x alone
-x0=[-0.18 0.18];
-beta_sol(i) = fzero(fun,x0);
-y_sol(i)=fun(beta_sol(i));
-end
-
-% use the formula for finding the roots of a third-order polynomial
-% beta_fsol=ones(length(delta_sdrl),3);
-beta_fsol=ones(length(delta_sdrl),1);
-y_fsol=ones(length(delta_sdrl),1);
-omega=complex(-0.5,0.5*sqrt(3));
-
-Delta=ones(1,length(delta_sdrl));
-for i=1:length(delta_sdrl)
-    p=-6;
-    q=6*delta_sdrl(i)./((Ns-1)*r);
-    Delta(i)=(q/2)^2+(p/3)^3;
-    % all the Delta are less than 0, it means that the formular has three
-    % roots
-    A=(-q/2+sqrt(Delta(i)))^(1/3);
-    B=(-q/2-sqrt(Delta(i)))^(1/3);
-%     beta_fsol(i,1)=real(A+B);
-%     beta_fsol(i,2)=real(omega*A+omega^2*B);
-%     beta_fsol(i,1)=real(omega^2*A+omega*B);
-    beta_fsol(i,1)=real(omega^2*A+omega*B);
-    d = delta_sdrl(i);                    % parameter
-    fun = @(x) myfun_s(x,d);    % function of x alone
-    y_fsol(i,1)=fun(beta_fsol(i,1));
-end
-
-
-figure;
-hold on;
-
-cmap=colormap("parula");
-for i=1:length(delta_sdrl)
-    % use Taylor expansion to approximate the solution
-%         y=beta_sdr.^3-6.*beta_sdr+6.*delta_sdrl(i)./((Ns-1)*r);
-    % use the accurate solution
-    y=(Ns-1).*(sqrt(r.^2.*(1-cos(beta_sdr)).^2+(ddtcp+r.*sin(beta_sdr)).^2)-ddtcp)-delta_sdrl(i);
-    plot(beta_sdr,y,'Color',cmap(i*10,:));
-end
-
-
-
-z=zeros(1,length(beta_sdr));
-plot(beta_sdr,z,'r');
-
-scatter(beta_sol,y_sol,'MarkerEdgeColor',[0.47 0.67 0.19],'Marker','*');
-scatter(beta_fsol,y_fsol,'MarkerEdgeColor',[0.67 0.47 0.19],'Marker','*');
-xlim([-pi/20-0.01 pi/20+0.01]);
-title('y=$\beta^3$-6$\beta$+$\frac{6\Delta_l}{(N_s-1)r}$','interpreter','latex');
-xlabel('bend angle/rad');
-ylabel('y');
-% lgd=cell(1,length(delta_sdrl));
-% for i=1:length(delta_sdrl)
-%     lgd{i}=['$\Delta_l=$',num2str(round(delta_sdrl(i),4)),'mm'];
-% end
-% legend(lgd,'interpreter','latex');
-
-real(beta_fsol)-beta_sol
 

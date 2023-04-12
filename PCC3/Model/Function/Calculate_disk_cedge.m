@@ -1,11 +1,12 @@
-function disk_edge_points = Calculate_disk_edge(p,po,p_n,r_disk,h)
-% Calculate_disk_info
+function disk_edge_points = Calculate_disk_cedge(p,po,p_n,r_disk,h)
+% Calculate_disk_cedge
 % Author: Lin Siyuan
 % Date : 2023/03/12
 % purpose: calculate the disk edge point in a circular shape
 % Input: 
 %   p: the characteristic point of the arc to calculate the disk edge
 %   points, it is a 3\times 1 vector 
+%   po: the center of the arc center, it is a 3\times 1 vector
 %   p_n: the normal vector perpendicular to the circular plane, it is a 3
 %   \times 1 vector
 %   r_disk: the radius of the disk

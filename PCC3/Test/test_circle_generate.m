@@ -10,14 +10,7 @@ p2=10*rand(3,1);
 p3=10*rand(3,1);
 
 
-% straight line test example
-% p1=[1;1;1];
-% p2=[2;2;2];
-% p3=[3;3;3];
 
-% disp(['p1=[',num2str(p1(1)),',',num2str(p1(2)),',',num2str(p1(3)),']']);
-% disp(['p2=[',num2str(p2(1)),',',num2str(p2(2)),',',num2str(p2(3)),']']);
-% disp(['p3=[',num2str(p3(1)),',',num2str(p3(2)),',',num2str(p3(3)),']']);
 [r,po]=Calculate_circle_center(p1,p2,p3);
 figure;
 
