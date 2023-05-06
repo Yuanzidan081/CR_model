@@ -54,7 +54,7 @@ p_end=p(end,:);
 P_actual=p_end';
 
 
-delta_p=P_target-P_actual;
+delta_p=P_actual-P_target;
 if norm(delta_p)>10*d
     delta_p_mv=10*d*delta_p/norm(delta_p);
 elseif norm(delta_p)>5*d
@@ -64,6 +64,8 @@ elseif norm(delta_p)>2*d
 else
     delta_p_mv=delta_p;
 end
+% delta_p_mv=(norm(delta_p)>0.01)*0.01*delta_p/norm(delta_p)+(norm(delta_p)<=0.01)*delta_p;
+
 Delat_p=norm(delta_p);
 err=Delat_p(1);
 if orientation_mode=='0'
@@ -80,10 +82,11 @@ while err_creteria && i < maxiteration
     [~,~,~,~,~,J_final]=Calculate_all_Hmat(initial_twist,length_arc,torsion_mode,orientation_mode);
 %     M=J_final*J_final';
     M=J_final'*J_final;
+    M_dim = size(M,1);
     A=diag(diag(M));
 % Levenberg-Marquardt-Mathod can convege
-    delta_u=inv(J_final'*J_final+0.8*A)*J_final'*delta_p_mv;
-
+%     delta_u=inv(J_final'*J_final+0.8*A)*J_final'*delta_p_mv;%useful 
+%     delta_u=inv(J_final'*J_final+0.8*eye(M_dim))*J_final'*delta_p_mv;
 % Levenberg-Marquardt-Mathod can convege
 %   delta_u=inv(J_final'*J_final)*J_final'*delta_p_mv;
 
@@ -91,7 +94,7 @@ while err_creteria && i < maxiteration
 %     delta_u=J_final'*inv(J_final*J_final')*delta_p_mv;
 
 %   Jacobian transpose method: converge but slow
-%       delta_u=J_final'*delta_p_mv;
+      delta_u=J_final'*delta_p_mv;
 
 %   matlab M-P inverse method: not always converge
 %       delta_u=pinv (J_final)*delta_p_mv;
@@ -107,7 +110,8 @@ while err_creteria && i < maxiteration
 
         u_mat=f_mat(4:6,:);
         delta_u_mat=reshape(delta_u,3,[]);
-        u_mat=u_mat-delta_u_mat;
+%         u_mat=u_mat-delta_u_mat;
+        u_mat=u_mat+delta_u_mat;
         f_mat(4:6,:)=u_mat;
     elseif torsion_mode=='0'
 %         delta_u0=ones(2*number_segments,1);
@@ -115,7 +119,8 @@ while err_creteria && i < maxiteration
 
         u_mat=f_mat(4:5,:);
         delta_u_mat=reshape(delta_u,2,[]);
-        u_mat=u_mat-delta_u_mat;
+%         u_mat=u_mat-delta_u_mat;
+        u_mat=u_mat+delta_u_mat;
         f_mat(4:5,:)=u_mat;
     end
     initial_twist=reshape(f_mat,[],1);
@@ -123,7 +128,7 @@ while err_creteria && i < maxiteration
     i=i+1;
     p_end=p(end,:);
     P_actual=p_end';
-    delta_p=P_target-P_actual;
+    delta_p=P_actual-P_target;
     if norm(delta_p)>10*d
         delta_p_mv=10*d*delta_p/norm(delta_p);
     elseif norm(delta_p)>5*d
@@ -133,6 +138,8 @@ while err_creteria && i < maxiteration
     else
         delta_p_mv=delta_p;
     end
+%     delta_p_mv=0.1*delta_p/norm(delta_p);
+%     delta_p_mv=(norm(delta_p)>0.01)*0.01*delta_p/norm(delta_p)+(norm(delta_p)<=0.01)*delta_p;
     Delta_p=norm(delta_p);
     err=Delta_p;
 %     disp(err);
