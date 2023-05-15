@@ -67,7 +67,7 @@ r_disk=0.3;
 %%% multi-point test
 h=0.2;
 for i=1:length(interp_points)
-disk_edge_points = Calculate_disk_edge((interp_points(i,:))',po,p_n,r_disk,h);
+disk_edge_points = Calculate_disk_cedge((interp_points(i,:))',po,p_n,r_disk,h);
 if h==0
     plot3(disk_edge_points(:,1),disk_edge_points(:,2),disk_edge_points(:,3),'Color','#E7298A');
     patch(disk_edge_points(:,1),disk_edge_points(:,2),disk_edge_points(:,3),'red');

@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cylinder_joint_1_pairs_pulley_asm2">
+  <link
+    name="cylinder0_link">
+    <inertial>
+      <origin
+        xyz="-2.21147901286285E-08 -1.17124714240567E-08 0.000538226424546475"
+        rpy="0 0 0" />
+      <mass
+        value="7.14460666884203E-06" />
+      <inertia
+        ixx="7.09666315631358E-12"
+        ixy="4.28779632331602E-17"
+        ixz="7.2023311115337E-17"
+        iyy="8.71354562102051E-12"
+        iyz="1.15784843060722E-16"
+        izz="1.39389111967457E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="cylinder1_link">
+    <inertial>
+      <origin
+        xyz="2.21147901282573E-08 0.000838226424546475 -1.17124714242402E-08"
+        rpy="0 0 0" />
+      <mass
+        value="7.14460666884203E-06" />
+      <inertia
+        ixx="7.09666315631358E-12"
+        ixy="-7.20233111152591E-17"
+        ixz="-4.28779632334134E-17"
+        iyy="1.39389111967457E-11"
+        iyz="1.15784843059987E-16"
+        izz="8.7135456210205E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0007"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder1_pulley_link1">
+    <inertial>
+      <origin
+        xyz="-0.00174 0 -0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-7.97784710100195E-35"
+        ixz="-5.89192351390783E-36"
+        iyy="1.11400875496839E-18"
+        iyz="2.88794327436936E-52"
+        izz="1.11400875496839E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_pulley_joint1"
+    type="revolute">
+    <origin
+      xyz="0.00012 0.001 0.00162"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder1_link" />
+    <child
+      link="cylinder1_pulley_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder1_pulley_link2">
+    <inertial>
+      <origin
+        xyz="-0.0015 2.16840434497101E-19 -0.00174"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-7.97784710100195E-35"
+        ixz="-2.8104356028974E-36"
+        iyy="1.11400875496839E-18"
+        iyz="4.22977567219675E-51"
+        izz="1.11400875496839E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_pulley_joint2"
+    type="revolute">
+    <origin
+      xyz="-0.00012 0.0003 0.00162"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder1_link" />
+    <child
+      link="cylinder1_pulley_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder1_pulley_link3">
+    <inertial>
+      <origin
+        xyz="0.00149999999999998 4.33680868994202E-19 -0.00174"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-7.73412529070568E-51"
+        ixz="-1.08812172603781E-34"
+        iyy="1.11400875496777E-18"
+        iyz="0"
+        izz="1.11400875496777E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_pulley_joint3"
+    type="revolute">
+    <origin
+      xyz="0.00162 0.001 -0.00012"
+      rpy="0 1.5708 0" />
+    <parent
+      link="cylinder1_link" />
+    <child
+      link="cylinder1_pulley_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder1_pulley_link4">
+    <inertial>
+      <origin
+        xyz="0.00173999999999999 -4.33680868994202E-19 -0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-7.73412529049776E-51"
+        ixz="-1.08812172602742E-34"
+        iyy="1.11400875495822E-18"
+        iyz="0"
+        izz="1.11400875495822E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_pulley_joint4"
+    type="revolute">
+    <origin
+      xyz="0.00162 0.0003 0.00012"
+      rpy="0 1.5708 0" />
+    <parent
+      link="cylinder1_link" />
+    <child
+      link="cylinder1_pulley_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder1_pulley_link5">
+    <inertial>
+      <origin
+        xyz="0.00174 2.16840434497101E-19 0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-1.84164692815845E-34"
+        ixz="5.53994514590172E-35"
+        iyy="1.11400875496777E-18"
+        iyz="1.07524819258416E-36"
+        izz="1.11400875496777E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_pulley_joint5"
+    type="revolute">
+    <origin
+      xyz="-0.00012 0.001 -0.00162"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder1_link" />
+    <child
+      link="cylinder1_pulley_link5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder1_pulley_link6">
+    <inertial>
+      <origin
+        xyz="0.00149999999999999 4.33680868994202E-19 0.00174"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-1.63226740399668E-34"
+        ixz="4.11207011338986E-35"
+        iyy="1.11400875496777E-18"
+        iyz="9.26853785736369E-37"
+        izz="1.11400875496777E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_pulley_joint6"
+    type="revolute">
+    <origin
+      xyz="0.00012 0.0003 -0.00162"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder1_link" />
+    <child
+      link="cylinder1_pulley_link6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder1_pulley_link7">
+    <inertial>
+      <origin
+        xyz="-0.00149999999999999 2.16840434497101E-19 0.00174"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-7.14923246559304E-36"
+        ixz="-4.84963182011873E-35"
+        iyy="1.11400875494747E-18"
+        iyz="-4.65961258688552E-36"
+        izz="1.11400875494747E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_pulley_joint7"
+    type="revolute">
+    <origin
+      xyz="-0.00162 0.001 0.00012"
+      rpy="0 1.5708 0" />
+    <parent
+      link="cylinder1_link" />
+    <child
+      link="cylinder1_pulley_link7" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder1_pulley_link8">
+    <inertial>
+      <origin
+        xyz="-0.00174 -4.33680868994202E-19 0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646162E-20"
+        ixy="-1.89513880598251E-36"
+        ixz="-5.15205864248841E-35"
+        iyy="1.11400875496437E-18"
+        iyz="5.20254991764332E-36"
+        izz="1.11400875496437E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder1_pulley_link8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder1_pulley_joint8"
+    type="revolute">
+    <origin
+      xyz="-0.00162 0.0003 -0.00012"
+      rpy="0 1.5708 0" />
+    <parent
+      link="cylinder1_link" />
+    <child
+      link="cylinder1_pulley_link8" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder0_pulley_link1">
+    <inertial>
+      <origin
+        xyz="-0.00174 -8.67361737988404E-19 -0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-8.33647624414051E-35"
+        ixz="-6.79704327489692E-35"
+        iyy="1.11400875494747E-18"
+        iyz="1.05187936488982E-35"
+        izz="1.11400875494747E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder0_pulley_joint1"
+    type="revolute">
+    <origin
+      xyz="0.00162 0.00012 0.0007"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder0_pulley_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder0_pulley_link2">
+    <inertial>
+      <origin
+        xyz="-0.00150000000000001 -7.89287295950767E-19 -0.00174"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="5.68811103690046E-47"
+        ixz="-7.50772634595873E-35"
+        iyy="1.11400875496777E-18"
+        iyz="0"
+        izz="1.11400875496777E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder0_pulley_joint2"
+    type="revolute">
+    <origin
+      xyz="0.00162 -0.00012 0"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder0_pulley_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder0_pulley_link3">
+    <inertial>
+      <origin
+        xyz="0.0015 2.60208521396521E-18 -0.00173999999999998"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="8.2661449393321E-35"
+        ixz="1.02066884131912E-34"
+        iyy="1.11400875496777E-18"
+        iyz="1.28292706084425E-49"
+        izz="1.11400875496777E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder0_pulley_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.00012 0.00162 0.0007"
+      rpy="1.5708 0 0" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder0_pulley_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder0_pulley_link4">
+    <inertial>
+      <origin
+        xyz="0.00173999999999999 -3.22505617460437E-18 -0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="2.05752215733798E-34"
+        ixz="1.31335460949779E-34"
+        iyy="1.11400875496839E-18"
+        iyz="-9.36046151559757E-38"
+        izz="1.11400875496839E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder0_pulley_joint4"
+    type="revolute">
+    <origin
+      xyz="0.00012 0.00162 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder0_pulley_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder0_pulley_link5">
+    <inertial>
+      <origin
+        xyz="0.00174000000000002 2.81892564846231E-18 0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-7.57951255924039E-35"
+        ixz="5.72020896650056E-36"
+        iyy="1.11400875497368E-18"
+        iyz="2.33439072141097E-36"
+        izz="1.11400875497368E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder0_pulley_joint5"
+    type="revolute">
+    <origin
+      xyz="-0.00162 -0.00012 0.0007"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder0_pulley_link5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder0_pulley_link6">
+    <inertial>
+      <origin
+        xyz="0.00150000000000002 2.92768112849256E-18 0.00174"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="-1.10620285092224E-35"
+        ixz="-2.59033957975933E-36"
+        iyy="1.11400875495822E-18"
+        iyz="-1.08333559371783E-37"
+        izz="1.11400875495822E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder0_pulley_joint6"
+    type="revolute">
+    <origin
+      xyz="-0.00162 0.00012 0"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder0_pulley_link6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder0_pulley_link7">
+    <inertial>
+      <origin
+        xyz="-0.0015 -0.000699999999999999 0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="1.02046792576044E-34"
+        ixz="5.58802109604559E-35"
+        iyy="1.11400875496777E-18"
+        iyz="3.44135375158031E-36"
+        izz="1.11400875496777E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder0_pulley_joint7"
+    type="revolute">
+    <origin
+      xyz="0.00012 -0.00162 0.0007"
+      rpy="1.5708 0 0" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder0_pulley_link7" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder0_pulley_link8">
+    <inertial>
+      <origin
+        xyz="-0.00174 0.000699999999999999 0.00174000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="2.26194671058465E-10" />
+      <inertia
+        ixx="5.65486677646163E-20"
+        ixy="4.20394117335077E-35"
+        ixz="7.25201928262088E-35"
+        iyy="1.11400875496777E-18"
+        iyz="-1.30714971811555E-38"
+        izz="1.11400875496777E-18" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cylinder_joint_1_pairs_pulley_asm2/meshes/cylinder0_pulley_link8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder0_pulley_joint8"
+    type="revolute">
+    <origin
+      xyz="-0.00012 -0.00162 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="cylinder0_link" />
+    <child
+      link="cylinder0_pulley_link8" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
