@@ -85,8 +85,8 @@ while err_creteria && i < maxiteration
     M_dim = size(M,1);
     A=diag(diag(M));
 % Levenberg-Marquardt-Mathod can convege
-%     delta_u=inv(J_final'*J_final+0.8*A)*J_final'*delta_p_mv;%useful 
-%     delta_u=inv(J_final'*J_final+0.8*eye(M_dim))*J_final'*delta_p_mv;
+    delta_u=inv(J_final'*J_final+0.8*A)*J_final'*delta_p_mv;%useful 
+%     delta_u=inv(J_final'*J_final+1*eye(M_dim))*J_final'*delta_p_mv;
 % Levenberg-Marquardt-Mathod can convege
 %   delta_u=inv(J_final'*J_final)*J_final'*delta_p_mv;
 
@@ -94,7 +94,7 @@ while err_creteria && i < maxiteration
 %     delta_u=J_final'*inv(J_final*J_final')*delta_p_mv;
 
 %   Jacobian transpose method: converge but slow
-      delta_u=J_final'*delta_p_mv;
+%       delta_u=J_final'*delta_p_mv;
 
 %   matlab M-P inverse method: not always converge
 %       delta_u=pinv (J_final)*delta_p_mv;

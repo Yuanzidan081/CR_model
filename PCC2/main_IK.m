@@ -14,19 +14,19 @@ parameter;
 %% verify the algorithmn of some shapes
 
 % 8
-tspan = 0:deg2rad(0.5):2*pi;
- 
-x_tip = 0.25*sign((cos(tspan))).*(sin(tspan)).*cos(tspan).^2;
-y_tip = 0.25*sign(cos(tspan)).*cos(tspan).^2;
-z_tip = 1.0*ones(1,length(tspan));
-P_target = [x_tip; y_tip; z_tip];
+% tspan = 0:deg2rad(0.5):2*pi;
+%  
+% x_tip = 0.25*sign((cos(tspan))).*(sin(tspan)).*cos(tspan).^2;
+% y_tip = 0.25*sign(cos(tspan)).*cos(tspan).^2;
+% z_tip = 1.0*ones(1,length(tspan));
+% P_target = [x_tip; y_tip; z_tip];
 
 %circle
-% tspan = 0:deg2rad(3):2*pi;
-% x_tip = 0.25*cos(tspan);
-% y_tip = 0.25*sin(tspan);
-% z_tip = 0.9*ones(1,length(tspan));
-% P_target = [x_tip; y_tip; z_tip];
+tspan = 0:deg2rad(3):2*pi;
+x_tip = 0.25*cos(tspan);
+y_tip = 0.25*sin(tspan);
+z_tip = 0.9*ones(1,length(tspan));
+P_target = [x_tip; y_tip; z_tip];
 
 % P_target=[0.2;0.4;0.6]
 
@@ -63,7 +63,7 @@ Err_res(i,:)=Delta_p;
 P_res(i,:)=P_actual';
 
 ct(i,:)=toc;%final computation time
-iter(i,:)=iteration_times%final iteration times
+iter(i,:)=iteration_times;%final iteration times
 
 [H{i},~,p{i},F] = FK_n_segments(kappa(:,1),tau,alpha,number_arc_interval,number_segments,disk_interval);
 for j=1:number_segments
@@ -79,5 +79,8 @@ P_target=P_target';
 
 fig1=figure(1);
 
-% plot_with_gif;
-plot_without_gif;
+plot_with_gif;
+% plot_without_gif;
+
+%%
+fprintf('Average iterations: %.4f\nMax iterations: %d\nAverage time: %.4f\nMax time: %.4f',mean(iter),max(iter),mean(ct),max(ct))

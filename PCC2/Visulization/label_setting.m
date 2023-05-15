@@ -3,7 +3,7 @@
 % hZLabel=zlabel('z (m)');
 % set([hXLabel, hYLabel, hZLabel]  ,...
 %     'FontSize'   , 12);
-hXLabel=get(gca,'XLabel')
+hXLabel=get(gca,'XLabel');
 hYLabel=get(gca,'YLabel');
 hZLabel=get(gca,'ZLabel');
 
