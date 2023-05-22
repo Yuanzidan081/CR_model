@@ -1,4 +1,4 @@
-f = getframe(gcf);
+f = getframe(fig2);
 imind = frame2im(f);
 [imind,cm] = rgb2ind(imind,256);
 if i == 1

@@ -8,7 +8,7 @@ function [P_actual,kappa,tau,alpha,Delta_p,final_twist,iteration_times] = IK_n_s
     orientation_mode,...
     disk_interval, ...
     initial_twist)
-% forward_n_segments
+% IK_n_segments
 % Author: Lin Siyuan
 % Date : 2023/02/26
 % Purpose: compute the inverse kinematic model of n-segments continuum robot with
@@ -38,7 +38,7 @@ function [P_actual,kappa,tau,alpha,Delta_p,final_twist,iteration_times] = IK_n_s
 %   final_twist: final twist 6n*1 vector
 %   iteration_times: the iteration times 
 
-
+P_target=P_target';
 if isempty(initial_twist)
     initial_twist=reshape(repmat([0;0;1;0;0;0],1,number_segments),[],1);
 end
@@ -53,14 +53,79 @@ d=min(length_arc)/50;
 p_end=p(end,:);
 P_actual=p_end';
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% matlab LM method 
+% i=1;
+% maxiteration=1000;
+% iteration_times=0;
+% delta_p=P_target-P_actual;
+% err=norm(delta_p);
+% 
+% err_creteria=err > err_bound;
+% while err_creteria && i < maxiteration
+% 
+%     if norm(delta_p)>10*d
+%         delta_p_mv=10*d*delta_p/norm(delta_p);
+%     elseif norm(delta_p)>5*d
+%         delta_p_mv=5*d*delta_p/norm(delta_p);
+%     elseif norm(delta_p)>2*d
+%         delta_p_mv=2*d*delta_p/norm(delta_p);
+%     else
+%         delta_p_mv=delta_p;
+%     end
+%     f_mat=reshape(initial_twist,6,[]);% f's form of matrix
+%     [~,~,~,~,~,J_final]=Calculate_all_Hmat(initial_twist,length_arc,torsion_mode,orientation_mode);
+% 
+%     if torsion_mode=='1'
+%         u_mat=reshape(f_mat(4:6,:),[],1);
+%         fun=@(u_new)J_final*(u_mat-u_new)-delta_p_mv;
+% 
+%         options=optimoptions('fsolve', 'Display','off','Algorithm',...
+%         'levenberg-marquardt'); 
+% 
+%         u_new0 = u_mat;
+%         [u_new,fval,exitflag,output]=fsolve(fun,u_new0,options); 
+% 
+%         u_mat = reshape(u_new,3,[]);
+%         f_mat(4:6,:)=u_mat ;
+%     elseif torsion_mode=='0'
+%         u_mat=reshape(f_mat(4:5,:),[],1);
+%         fun=@(u_new)J_final*(u_mat-u_new)-delta_p_mv;
+% %         fun=@()myfun
+%         options=optimoptions('fsolve','Display','off','Algorithm',...
+%         'levenberg-marquardt','InitDamping',1.5,'ScaleProblem','jacobian',...
+%         'FunctionTolerance',0.001,'MaxIterations',1000);
+%          
+% %         options.ScaleProblem
+%         u_new0 = u_mat;
+%         [u_new,fval,exitflag,output]=fsolve(fun,u_new0,options);
+% 
+%         u_mat = reshape(u_new,2,[]);
+%         f_mat(4:5,:)=u_mat;
+%     end 
+%     initial_twist=reshape(f_mat,[],1);
+%     [~,~,p,~]=FK_n_segments_twist(initial_twist,number_arc_interval,number_segments,disk_interval);
+%     p_end=p(end,:); 
+%     P_actual=p_end'; 
+%     delta_p=P_target-P_actual;
+%     err=norm(delta_p);
+%     err_creteria=err > err_bound;
+%     iteration_times = iteration_times+output.iterations; 
+%     i = i+1;  
+% end
+% Delta_p=norm(delta_p);
+% exitflag
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-delta_p=P_actual-P_target;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% my method
+delta_p=P_target-P_actual;
 if norm(delta_p)>10*d
     delta_p_mv=10*d*delta_p/norm(delta_p);
-elseif norm(delta_p)>5*d
-    delta_p_mv=5*d*delta_p/norm(delta_p);
-elseif norm(delta_p)>2*d
-    delta_p_mv=2*d*delta_p/norm(delta_p);
+% elseif norm(delta_p)>5*d
+%     delta_p_mv=5*d*delta_p/norm(delta_p);
+% elseif norm(delta_p)>2*d
+%     delta_p_mv=2*d*delta_p/norm(delta_p);
 else
     delta_p_mv=delta_p;
 end
@@ -75,23 +140,23 @@ elseif orientation_mode=='1'
 end
 i=1;
 maxiteration=1000;
-
-
+global lambda;
+% lambda=0.8;
 while err_creteria && i < maxiteration
-    
+    f_mat=reshape(initial_twist,6,[]);% f's form of matrix
     [~,~,~,~,~,J_final]=Calculate_all_Hmat(initial_twist,length_arc,torsion_mode,orientation_mode);
 %     M=J_final*J_final';
     M=J_final'*J_final;
     M_dim = size(M,1);
     A=diag(diag(M));
 % Levenberg-Marquardt-Mathod can convege
-    delta_u=inv(J_final'*J_final+0.8*A)*J_final'*delta_p_mv;%useful 
+    delta_u=inv(J_final'*J_final+lambda*A)*J_final'*delta_p_mv;%useful
+%     delta_u=inv(J_final'*J_final+0.8*A)*J_final'*delta_p_mv;%useful
 %     delta_u=inv(J_final'*J_final+1*eye(M_dim))*J_final'*delta_p_mv;
-% Levenberg-Marquardt-Mathod can convege
-%   delta_u=inv(J_final'*J_final)*J_final'*delta_p_mv;
 
 %   Moore–Penrose inverse: converge but slow
-%     delta_u=J_final'*inv(J_final*J_final')*delta_p_mv;
+%   delta_u=inv(J_final'*J_final)*J_final'*delta_p_mv;
+%   delta_u=J_final'*inv(J_final*J_final')*delta_p_mv;
 
 %   Jacobian transpose method: converge but slow
 %       delta_u=J_final'*delta_p_mv;
@@ -99,28 +164,16 @@ while err_creteria && i < maxiteration
 %   matlab M-P inverse method: not always converge
 %       delta_u=pinv (J_final)*delta_p_mv;
 
-%     fun=@(delta_u)J_final*delta_u-delta_p_mv;
-%     options=optimoptions('fsolve',...
-%         'Display','off','Algorithm', 'levenberg-marquardt');
-
-    f_mat=reshape(initial_twist,6,[]);% f's form of matrix
+  
     if torsion_mode=='1'
-%         delta_u0=ones(3*number_segments,1);
-%         delta_u=fsolve(fun,delta_u0,options);
-
         u_mat=f_mat(4:6,:);
         delta_u_mat=reshape(delta_u,3,[]);
-%         u_mat=u_mat-delta_u_mat;
-        u_mat=u_mat+delta_u_mat;
+        u_mat=u_mat-delta_u_mat;
         f_mat(4:6,:)=u_mat;
     elseif torsion_mode=='0'
-%         delta_u0=ones(2*number_segments,1);
-%         delta_u=fsolve(fun,delta_u0,options);
-
         u_mat=f_mat(4:5,:);
         delta_u_mat=reshape(delta_u,2,[]);
-%         u_mat=u_mat-delta_u_mat;
-        u_mat=u_mat+delta_u_mat;
+        u_mat=u_mat-delta_u_mat;
         f_mat(4:5,:)=u_mat;
     end
     initial_twist=reshape(f_mat,[],1);
@@ -128,25 +181,25 @@ while err_creteria && i < maxiteration
     i=i+1;
     p_end=p(end,:);
     P_actual=p_end';
-    delta_p=P_actual-P_target;
+    delta_p=P_target-P_actual;
     if norm(delta_p)>10*d
         delta_p_mv=10*d*delta_p/norm(delta_p);
-    elseif norm(delta_p)>5*d
-        delta_p_mv=5*d*delta_p/norm(delta_p);
-    elseif norm(delta_p)>2*d
-        delta_p_mv=2*d*delta_p/norm(delta_p);
+%     elseif norm(delta_p)>5*d
+%         delta_p_mv=5*d*delta_p/norm(delta_p);
+%     elseif norm(delta_p)>2*d
+%         delta_p_mv=2*d*delta_p/norm(delta_p);
     else
         delta_p_mv=delta_p;
     end
 %     delta_p_mv=0.1*delta_p/norm(delta_p);
 %     delta_p_mv=(norm(delta_p)>0.01)*0.01*delta_p/norm(delta_p)+(norm(delta_p)<=0.01)*delta_p;
-    Delta_p=norm(delta_p);
-    err=Delta_p;
-%     disp(err);
-    err_creteria=err > err_bound;
     
+    err=norm(delta_p);
+%     disp(err);
+    err_creteria=err > err_bound;    
 end
-iteration_times=i
+Delta_p=norm(err);
+iteration_times=i;
 if i==1
     f_mat=reshape(initial_twist,6,[]);% f's form of matrix
     if torsion_mode=='1'
@@ -161,14 +214,13 @@ if i==1
         u_mat=f_mat(4:5,:);
 
     end
-    Delta_p=norm(P_actual-P_target);
+%     Delta_p=norm(P_actual-P_target);
 end
 if err_creteria
     disp('it does not converge!')
-else
-    
-    
+else 
 end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 final_twist=initial_twist;
 

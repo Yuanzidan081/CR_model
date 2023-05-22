@@ -1,0 +1,36 @@
+lambda=1.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+18.843|83|0.0209898|0.0939674|0.998534|0.794388|0.780128|0.937876
+
+lambda=2.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+29.4298|144|0.0323052|0.156123|0.999706|0.627411|0.579851|0.876213
+
+lambda=3.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+41.0826|216|0.0455807|0.240589|0.998855|0.523816|0.455810|0.939970
+
+lambda=4.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+52.6116|275|0.0581142|0.304718|0.999925|0.462037|0.401472|0.969191
+
+lambda=5.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+64.1983|331|0.0710511|0.375114|0.999685|0.417160|0.362615|0.977743
+
+lambda=6.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+75.8347|386|0.0836104|0.414565|0.999994|0.378487|0.330784|0.983928
+
+lambda=7.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+87.5207|441|0.0962544|0.477687|0.999979|0.352040|0.303682|0.988454
+
+lambda=8.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+99.1983|496|0.109684|0.535665|0.999871|0.331010|0.286530|0.992064
+
+lambda=9.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+110.95|551|0.123394|0.625918|0.999884|0.312092|0.271053|0.993732
+

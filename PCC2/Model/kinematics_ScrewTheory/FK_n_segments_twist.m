@@ -6,18 +6,14 @@ function [H,R,p,F] = FK_n_segments_twist(f,number_arc_interval,number_segments,d
 % the given parameters kappa, tau and alpha
 
 %% Input: 
-%   kappa: all the arc curvature, you'd better set it as a n*1 vector
-%   tau: all the arc torsion, you can set it as zero, you'd better set it
-%        as a n*1 vector 
-%   alpha: the angle between the bending plane and the local +X axis, you
-%          must set it as a n*1 vector
+%   f: the twist vector as a cell n* (6\times 1)
 %   number_arc_interval: the number of the interval in every arc, the first arc has k(1)+1，
 %           the second has k(2), ... the whole continuum robot has sum(k)+1, you
 %          must set it as a n*1 vector 
 %   number_segments: the number of continuum robot segments, it is a scalar
 %   disk_interval: the distance interval between the discs of continuum robot,
 %            it is a scalar
-%   F: the twist vector as a cell n* (6\times 1)
+
 %% Output:
 %   H: the homogenous matrix of each center of discs, set by the form of
 %      n*16 vector, the i th row means the i th homogenous matrix.
