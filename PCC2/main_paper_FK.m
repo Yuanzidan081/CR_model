@@ -4,7 +4,7 @@ close all;
 
 % add path to main_paper.m
 addpath('Model/kinematics_ScrewTheory/');
-addpath('Model/common/');
+
 addpath('Parameter/');
 
 % import the parameters

@@ -4,7 +4,6 @@ close all;
 
 % add path to main.m
 addpath('Model/kinematics_ScrewTheory/');
-addpath('Model/common/');
 addpath('Parameter/');
 addpath('Visulization\');
 
@@ -27,14 +26,16 @@ end
 
 end
 %% visualization
-fig1=figure(1);
+fig2=figure(1);
 fig_setting;
 
-for kt=1:2
-subplot(1,2,kt);
-
+for kt=2:2
+% subplot(1,kt(end),kt);
+hold on;
+title_setting;
+label_setting;
 for i=1:size(kappa,1)
-    hold on;
+    
     for j=1:number_segments
 %         text=['plot3(arc{',num2str(i),',',num2str(j),...
 %             '}(:,1),arc{',num2str(i),',',num2str(j),...
@@ -47,13 +48,13 @@ for i=1:size(kappa,1)
     end
     line_setting;
     axes_setting;
-%     drawnow();
-%     pause(0.2)
-%     generate_gif;
+    drawnow();
+    pause(0.2)
+    generate_gif;
 end
 
-label_setting;
-title_setting;
+
+
 end
 
 

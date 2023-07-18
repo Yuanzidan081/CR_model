@@ -1,0 +1,4 @@
+lambda=1.000000e-01
+Average iterations|Max iteration|Average time|Max time|Max error|Max X error|Max Y error|Max Z error
+18.9421|83|0.0210768|0.0891984|0.998007|0.843988|0.833385|0.867162
+

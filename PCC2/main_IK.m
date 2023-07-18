@@ -34,7 +34,7 @@ orientation_mode='0';
 sample_point=size(P_target,1);
 
 % lambda_range = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9];
-lambda_range = [0.1,0.2];
+lambda_range = 0.1;
 for k=1:length(lambda_range)
 
     global lambda
